@@ -1,24 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cafe from "./Cafe";
-
-const listaCafe = [{"id":1,"name":"Black Coffee","type":"Regular","region":"South America"},{"id":2,"name":"Espresso","type":"Strong","region":"Italy"},{"id":3,"name":"Cappuccino","type":"Milk","region":"Italy"},{"id":4,"name":"Latte","type":"Milk","region":"Europe"},{"id":5,"name":"Mocha","type":"Chocolate","region":"Middle East"},{"id":6,"name":"Americano","type":"Regular","region":"United States"},{"id":7,"name":"Macchiato","type":"Strong","region":"Italy"},{"id":8,"name":"Flat White","type":"Milk","region":"Australia"},{"id":9,"name":"Turkish Coffee","type":"Strong","region":"Turkey"},{"id":10,"name":"Cortado","type":"Milk","region":"Spain"}]
+import { FormattedMessage } from "react-intl";
+import './styles.css';
 
 function ListaCafes({ onCoffeeSelect }) { 
 
+  const [listaCafe, setListaCafe] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/cafes")
+      .then((response) => response.json())
+      .then((data) => setListaCafe(data));
+  }, []);
+
   const handleCoffeeClick = (coffee) => {
     onCoffeeSelect(coffee);
-    console.log(coffee);
   };
 
   return (
-    <div>
-      <table className="table" style={{textAlign: 'left'}}>
-        <thead className="thead-dark">
+    <div style={{paddingLeft: '6rem'}}>
+      <table className="table" style={{textAlign: 'left', maxWidth: '95%'}}>
+        <thead className="thead-dark header">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Región</th>
+            <th scope="col"><FormattedMessage id="Nombre" /></th>
+            <th scope="col"><FormattedMessage id="Tipo" /></th>
+            <th scope="col"><FormattedMessage id="Región" /></th>
           </tr>
         </thead>
         <tbody>

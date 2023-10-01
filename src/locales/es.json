@@ -1,0 +1,15 @@
+{
+    "Nombre": "Nombre",
+    "Tipo": "Tipo",
+    "Región": "Región",
+    "Inicio de sesión": "Inicio de sesión",
+    "Nombre de usuario": "Nombre de usuario",
+    "Contraseña": "Contraseña",
+    "Ingresar": "Ingresar",
+    "Cancelar": "Cancelar",
+    "Contáctanos": "Contáctanos",
+    "Notas": "Notas",
+    "InfoCultivo": "Cultivado a una altura de",
+    "msnm": "msnm",
+    "AuthError": "Error de autenticación. Revise sus credenciales"
+}

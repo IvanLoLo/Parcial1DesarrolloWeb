@@ -1,0 +1,15 @@
+{
+    "Nombre": "Name",
+    "Tipo": "Type",
+    "Región": "Region",
+    "Inicio de sesión": "Log In",
+    "Nombre de usuario": "Username",
+    "Contraseña": "Password",
+    "Ingresar": "Login",
+    "Cancelar": "Cancel",
+    "Contáctanos": "Contact us",
+    "Notas": "Notes",
+    "InfoCultivo": "Grown at an altitude of",
+    "msnm": "masl",
+    "AuthError": "Authentication error. Check your credentials"
+}

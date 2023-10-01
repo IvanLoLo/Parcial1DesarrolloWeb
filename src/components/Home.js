@@ -8,7 +8,7 @@ function Home(){
     const [selectedCoffee, setSelectedCoffee] = useState(null);
 
     return(
-        <Container fluid>
+        <Container fluid className="p-3">
             <Row>
                 <Col className="col-8">
                     <ListaCafes onCoffeeSelect={setSelectedCoffee}/>

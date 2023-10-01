@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import {IntlProvider} from 'react-intl';
+import localeEnMessages from "./locales/en.json";
+import localeEsMessages from "./locales/es.json";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <IntlProvider locale={navigator.language} messages={navigator.language.startsWith('es') ? localeEsMessages : localeEnMessages}>
+      <App />
+    </IntlProvider>
   </React.StrictMode>
 );
 
